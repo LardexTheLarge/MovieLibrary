@@ -1,0 +1,40 @@
+﻿@page "/moviedetail/{MovieId}"
+
+<h1 class="page-title">Details for @Movie.Title</h1>
+
+<div class="col-12 row">
+	<div class="col-2">
+		<img {Movie.MovieId}.jpg")" class="img-responsive rounded-circle employee-detail-img" />
+	</div>
+	<div class="col-10 row">
+		<div class="col-xs-12 col-sm-8">
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Movie ID</label>
+				<div class="col-sm-8">
+					<label type="text" class="form-control-plaintext">@Movie.MovieId</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Title</label>
+				<div class="col-sm-8">
+					<label type="text" readonly class="form-control-plaintext">@Movie.Title</label>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Director</label>
+				<div class="col-sm-8">
+					<label type="text" readonly class="form-control-plaintext">@Movie.Director</label>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Date Released</label>
+				<div class="col-sm-8">
+					<label type="text" readonly class="form-control-plaintext">@Movie.DateReleased.ToShortDateString()</label>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+﻿@page "/movieedit"
+@page "/movieedit/{MovieId}"
+
+@using MovieLibrary.Shared
+
+@if (!Saved)
+{
+
+<section class="employee-edit">
+		<h1 class="page-title">Details for @Movie.Title </h1>
+		<EditForm Model="@Movie" OnValidSubmit="@HandleValidSubmit"
+				OnInvalidSubmit="@HandleInvalidSubmit">
+
+			<div class="form-group row">
+				<label for="Title" class="col-sm-3">Title: </label>
+				<InputText id="Title" @bind-Value="@Movie.Title" class="form-control col-sm-8" placeholder="Enter Title"></InputText>
+
+			</div>
+
+			<div class="form-group row">
+				<label for="Director" class="col-sm-3">Director: </label>
+				<InputText id="Director" class="form-control col-sm-8" @bind-Value="@Movie.Director" placeholder="Enter Director's name"></InputText>
+
+			</div>
+
+
+			<div class="form-group row">
+				<label for="Date Released" class="col-sm-3">Date Released: </label>
+				<InputDate id="Date Released" class="form-control col-sm-8" @bind-Value="@Movie.DateReleased" placeholder="Enter the release date"></InputDate>
+
+			</div>
+
+			<button type="submit" class="btn btn-primary table-btn">
+				Save Movie
+			</button>
+
+			@if (!String.IsNullOrEmpty(Movie.MovieId))
+			{
+				<a class="btn btn-danger" @onclick="@DeleteMovie">
+					Delete
+				</a>
+			}
+
+			<a class="btn btn-outline-primary" @onclick="@NavigateToOverview">
+				Back to Movie List
+			</a>
+
+		</EditForm>
+</section>
+}
+else
+{
+	<div class="alert @StatusClass">@Message</div>
+}
