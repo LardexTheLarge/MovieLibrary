@@ -4,20 +4,17 @@
 
 My program is a Movie library made from C# and Blazor using the .Net framework. This movie library is runing off a server called airtable where all the movies you add get saved. The main use for my app is for users to add movies they wish to watch in the future. The user can update movies they added and delete them.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 - [Tests](#test)
 - [Questions](#questions)
 
 ## Installation
 
-git clone git@github.com:LardexTheLarge/MovieLibrary.git -- this command will copy the code to your machine.
+`git clone git@github.com:LardexTheLarge/MovieLibrary.git`
 
 ## Usage
 
@@ -31,10 +28,6 @@ Web Link:
 ## Credits
 
 LardexTheLarge
-
-## License
-
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
 ## Test
 
